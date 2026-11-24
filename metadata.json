@@ -1,0 +1,6 @@
+{
+  "name": "Hard-Lan Tecnologia",
+  "description": "Desde 2002 especialista em suporte T.I., servidores, virtualização, cybersegurança e Wi-Fi seguro em São José do Rio Preto – SP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
