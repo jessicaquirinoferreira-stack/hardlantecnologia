@@ -10,13 +10,13 @@ export const COMPANY = {
   street: 'Rua Canadá, 312 – Jardim América',
   cityState: 'São José do Rio Preto – SP',
   cep: '15055-350',
-  phoneDisplay: '(17) 3225-4828',
-  phoneHref: 'tel:+551732254828',
-  whatsappNumber: '551732254828',
+  phoneDisplay: '(17) 99817-8198',
+  phoneHref: 'tel:+5517998178198',
+  whatsappNumber: '5517998178198',
   whatsappHref:
-    'https://wa.me/551732254828?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20Hard-Lan%20Tecnologia.',
+    'https://wa.me/5517998178198?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20Hard-Lan%20Tecnologia.',
   instagramHandle: '@hardlantecnologia',
-  instagramHref: 'https://instagram.com/hardlantecnologia',
+  instagramHref: 'https://www.instagram.com/hardlantecnologia/',
   cnpj: '05.300.478/0001-50',
   hours: 'Segunda a Sexta, das 08h00 às 18h00',
   mapsEmbedUrl:

@@ -9,6 +9,7 @@ import { Navbar } from './components/Navbar';
 import { ProjectsSection } from './components/ProjectsSection';
 import { ServiceDetailModal } from './components/ServiceDetailModal';
 import { ServicesSection } from './components/ServicesSection';
+import { VirtualAssistant } from './components/VirtualAssistant';
 import { WhatsAppFloatingButton } from './components/WhatsAppFloatingButton';
 import { WhyChooseSection } from './components/WhyChooseSection';
 import { SERVICES, type ServiceItem } from './data/siteData';
@@ -85,6 +86,7 @@ export default function App() {
           onRequestServiceQuote={(serviceTitle) => handleRequestQuote(serviceTitle)}
         />
 
+        <VirtualAssistant />
         <WhatsAppFloatingButton />
       </div>
     </MotionConfig>
