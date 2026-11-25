@@ -329,23 +329,37 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
                 href={COMPANY.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex min-h-[54px] items-center justify-between rounded-xl border border-[#25D366]/35 bg-[#25D366]/10 px-5 py-3.5 text-slate-900 dark:text-white hover:bg-[#25D366]/20 transition-colors"
+                className="flex min-h-[56px] items-center justify-between rounded-xl border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-3.5 text-slate-900 dark:text-white hover:bg-[#25D366]/20 transition-colors"
               >
-                <span className="flex items-center gap-3 font-semibold text-sm sm:text-base">
-                  <MessageCircle className="h-5 w-5 text-[#19A952] dark:text-[#25D366]" aria-hidden="true" />
-                  Atendimento via WhatsApp
+                <span className="flex items-center gap-3">
+                  <MessageCircle className="h-5 w-5 shrink-0 text-[#19A952] dark:text-[#25D366]" aria-hidden="true" />
+                  <span className="flex flex-col leading-tight">
+                    <span className="font-semibold text-sm sm:text-base">
+                      WhatsApp · <span className="font-mono tabular-nums">{COMPANY.whatsappDisplay}</span>
+                    </span>
+                    <span className="text-xs text-slate-600 dark:text-slate-400">
+                      Atendimento rápido e orçamentos
+                    </span>
+                  </span>
                 </span>
-                <ExternalLink className="h-4 w-4 text-slate-500 dark:text-slate-400" aria-hidden="true" />
+                <ExternalLink className="h-4 w-4 shrink-0 text-slate-500 dark:text-slate-400" aria-hidden="true" />
               </a>
 
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <a
                   href={COMPANY.phoneHref}
-                  className="flex min-h-[52px] items-center justify-between rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#10121B] px-4 py-3 text-slate-900 dark:text-white hover:border-[#007BFF]/45 dark:hover:border-[#00D4FF]/45 transition-colors"
+                  className="flex min-h-[54px] items-center justify-between rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#10121B] px-4 py-3 text-slate-900 dark:text-white hover:border-[#007BFF]/45 dark:hover:border-[#00D4FF]/45 transition-colors"
                 >
-                  <span className="flex items-center gap-2.5 text-sm font-semibold font-mono tabular-nums">
-                    <Phone className="h-4 w-4 text-[#007BFF] dark:text-[#00D4FF]" aria-hidden="true" />
-                    {COMPANY.phoneDisplay}
+                  <span className="flex items-center gap-2.5">
+                    <Phone className="h-4 w-4 shrink-0 text-[#007BFF] dark:text-[#00D4FF]" aria-hidden="true" />
+                    <span className="flex flex-col leading-tight">
+                      <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400">
+                        Telefone Fixo
+                      </span>
+                      <span className="text-sm font-semibold font-mono tabular-nums">
+                        {COMPANY.phoneDisplay}
+                      </span>
+                    </span>
                   </span>
                 </a>
 
@@ -353,11 +367,18 @@ export function ContactSection({ preselectedService }: ContactSectionProps) {
                   href={COMPANY.instagramHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex min-h-[52px] items-center justify-between rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#10121B] px-4 py-3 text-slate-900 dark:text-white hover:border-[#007BFF]/45 dark:hover:border-[#00D4FF]/45 transition-colors"
+                  className="flex min-h-[54px] items-center justify-between rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#10121B] px-4 py-3 text-slate-900 dark:text-white hover:border-[#007BFF]/45 dark:hover:border-[#00D4FF]/45 transition-colors"
                 >
-                  <span className="flex items-center gap-2.5 text-sm font-semibold truncate">
+                  <span className="flex items-center gap-2.5 min-w-0">
                     <Instagram className="h-4 w-4 shrink-0 text-[#007BFF] dark:text-[#00D4FF]" aria-hidden="true" />
-                    {COMPANY.instagramHandle}
+                    <span className="flex flex-col leading-tight min-w-0">
+                      <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400">
+                        Instagram
+                      </span>
+                      <span className="text-sm font-semibold truncate">
+                        {COMPANY.instagramHandle}
+                      </span>
+                    </span>
                   </span>
                 </a>
               </div>

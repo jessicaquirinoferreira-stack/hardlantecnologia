@@ -35,7 +35,7 @@ function getAssistantReply(rawInput: string): { text: string; showSocialActions:
 
   if (q.includes('endereco') || q.includes('onde') || q.includes('local') || q.includes('horario') || q.includes('abre')) {
     return {
-      text: `Estamos na ${COMPANY.address}. Atendemos de ${COMPANY.hours}. Se preferir agendar uma visita técnica ou falar agora mesmo, é só chamar no WhatsApp ${COMPANY.phoneDisplay}.`,
+      text: `Estamos na ${COMPANY.address}. Atendemos de ${COMPANY.hours}. Você pode ligar no fixo ${COMPANY.phoneDisplay} ou chamar no WhatsApp ${COMPANY.whatsappDisplay}.`,
       showSocialActions: true,
     };
   }
@@ -61,9 +61,9 @@ function getAssistantReply(rawInput: string): { text: string; showSocialActions:
     };
   }
 
-  if (q.includes('orcamento') || q.includes('preco') || q.includes('valor') || q.includes('contato') || q.includes('whats') || q.includes('insta') || q.includes('rede') || q.includes('falar')) {
+  if (q.includes('orcamento') || q.includes('preco') || q.includes('valor') || q.includes('contato') || q.includes('whats') || q.includes('insta') || q.includes('rede') || q.includes('falar') || q.includes('telefone')) {
     return {
-      text: `Nosso atendimento direto é pelo WhatsApp ${COMPANY.phoneDisplay}. Você também pode conferir nossos projetos reais (incluindo cases como o Itaú) no Instagram ${COMPANY.instagramHandle}!`,
+      text: `Nosso WhatsApp é ${COMPANY.whatsappDisplay} e o telefone fixo é ${COMPANY.phoneDisplay}. Você também pode conferir nossos projetos reais (incluindo cases como o Itaú) no Instagram ${COMPANY.instagramHandle}!`,
       showSocialActions: true,
     };
   }
@@ -76,7 +76,7 @@ function getAssistantReply(rawInput: string): { text: string; showSocialActions:
   }
 
   return {
-    text: `Entendi! Para uma resposta técnica rápida e orçamento personalizado para sua empresa, nossa equipe atende diretamente pelo WhatsApp ${COMPANY.phoneDisplay} e compartilha nossos bastidores e projetos no Instagram ${COMPANY.instagramHandle}.`,
+    text: `Entendi! Para atendimento imediato, fale com a gente no WhatsApp ${COMPANY.whatsappDisplay} ou no fixo ${COMPANY.phoneDisplay}. Também publicamos nossos bastidores e projetos no Instagram ${COMPANY.instagramHandle}.`,
     showSocialActions: true,
   };
 }

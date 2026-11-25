@@ -1,4 +1,4 @@
-import { Instagram, Moon, Phone, Sun } from 'lucide-react';
+import { Instagram, MessageCircle, Moon, Phone, Sun } from 'lucide-react';
 import { COMPANY } from '../data/siteData';
 import { Logo } from './Logo';
 
@@ -70,7 +70,18 @@ export function Footer({ isDark, onToggleTheme }: FooterProps) {
                   className="inline-flex items-center gap-2 font-mono font-medium text-slate-900 dark:text-slate-200 hover:text-[#007BFF] dark:hover:text-[#00D4FF] transition-colors tabular-nums"
                 >
                   <Phone className="h-3.5 w-3.5" aria-hidden="true" />
-                  {COMPANY.phoneDisplay}
+                  <span>Fixo: {COMPANY.phoneDisplay}</span>
+                </a>
+              </p>
+              <p>
+                <a
+                  href={COMPANY.whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-mono font-medium text-slate-900 dark:text-slate-200 hover:text-[#25D366] transition-colors tabular-nums"
+                >
+                  <MessageCircle className="h-3.5 w-3.5 text-[#19A952] dark:text-[#25D366]" aria-hidden="true" />
+                  <span>WhatsApp: {COMPANY.whatsappDisplay}</span>
                 </a>
               </p>
               <p>

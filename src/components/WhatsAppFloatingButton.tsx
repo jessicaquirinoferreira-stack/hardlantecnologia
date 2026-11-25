@@ -21,8 +21,8 @@ export function WhatsAppFloatingButton() {
         href={COMPANY.whatsappHref}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Falar com a Hard-Lan Tecnologia pelo WhatsApp (17) 99817-8198"
-        title="WhatsApp (17) 99817-8198"
+        aria-label="Falar com a Hard-Lan Tecnologia pelo WhatsApp (17) 98178-1288"
+        title="WhatsApp (17) 98178-1288"
         className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-slate-950 shadow-[0_8px_30px_rgba(37,211,102,0.38)] hover:scale-105 hover:shadow-[0_10px_34px_rgba(37,211,102,0.55)] active:scale-95 transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00D4FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0F]"
       >
         <svg

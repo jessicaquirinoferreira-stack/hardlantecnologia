@@ -10,11 +10,12 @@ export const COMPANY = {
   street: 'Rua Canadá, 312 – Jardim América',
   cityState: 'São José do Rio Preto – SP',
   cep: '15055-350',
-  phoneDisplay: '(17) 99817-8198',
-  phoneHref: 'tel:+5517998178198',
-  whatsappNumber: '5517998178198',
+  phoneDisplay: '(17) 3225-4828',
+  phoneHref: 'tel:+551732254828',
+  whatsappDisplay: '(17) 98178-1288',
+  whatsappNumber: '5517981781288',
   whatsappHref:
-    'https://wa.me/5517998178198?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20Hard-Lan%20Tecnologia.',
+    'https://wa.me/5517981781288?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20Hard-Lan%20Tecnologia.',
   instagramHandle: '@hardlantecnologia',
   instagramHref: 'https://www.instagram.com/hardlantecnologia/',
   cnpj: '05.300.478/0001-50',
@@ -300,13 +301,22 @@ export const CLIENTS: ClientLogo[] = [
   { name: 'Contábil Vanguarda', sector: 'Serviços Corporativos' },
 ];
 
+export interface WhatsAppChatBubble {
+  from: 'client' | 'hardlan';
+  text: string;
+  time: string;
+}
+
 export interface Testimonial {
   id: string;
   name: string;
   role: string;
   company: string;
-  initials: string;
-  quote: string;
+  avatar: string;
+  contactHeader: string;
+  statusText: string;
+  dateLabel: string;
+  messages: WhatsAppChatBubble[];
   contextMetric: string;
 }
 
@@ -316,30 +326,104 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Ricardo Alencar',
     role: 'Gerente Administrativo e Operações',
     company: 'Noroeste Indústria & Comércio',
-    initials: 'RA',
-    quote:
-      'Antes da Hard-Lan, sofríamos com lentidão no ERP e quedas semanais na rede do galpão. Eles reestruturaram nosso rack, virtualizaram nossos servidores e implantaram backup imutável. Hoje operamos com estabilidade total.',
-    contextMetric: 'Parceiro há 9 anos · Virtualização e Suporte',
+    avatar: '/src/assets/images/client_ricardo_avatar_1795605526550.jpg',
+    contactHeader: 'Ricardo · Noroeste Ind.',
+    statusText: 'visto por último hoje às 14:22',
+    dateLabel: 'HOJE',
+    messages: [
+      {
+        from: 'hardlan',
+        text: 'Boa tarde, Ricardo! Tudo certinho por aí depois da virada do cluster de virtualização?',
+        time: '10:14',
+      },
+      {
+        from: 'client',
+        text: 'Boa tarde pessoal!! Cara, nem se compara com antes',
+        time: '10:18',
+      },
+      {
+        from: 'client',
+        text: 'Antes o ERP travava toda semana e a gente ficava na mão no faturamento. Depois que vocês colocaram os servidores virtualizados e o backup imutável, zero queda até hoje 🙌',
+        time: '10:19',
+      },
+      {
+        from: 'client',
+        text: 'Equipe salvou demais aqui, podem contar sempre',
+        time: '10:19',
+      },
+      {
+        from: 'hardlan',
+        text: 'Show, Ricardo! Seguimos monitorando por aqui 👍',
+        time: '10:21',
+      },
+    ],
+    contextMetric: 'Cliente há 9 anos · Virtualização e Suporte',
   },
   {
     id: 'dep-2',
-    name: 'Dra. Camila Fernandes',
+    name: 'Dra. Ana Silva',
     role: 'Diretora Clínica',
     company: 'Grupo América Saúde',
-    initials: 'CF',
-    quote:
-      'Em clínica médica, perder acesso ao prontuário ou expor dados de pacientes não é opção. A equipe implantou firewall dedicado e separou o Wi-Fi dos visitantes com agilidade e documentação exemplar.',
-    contextMetric: 'Infraestrutura Wi-Fi e LGPD · São José do Rio Preto',
+    avatar: '/src/assets/images/client_camila_avatar_1795605527197.jpg',
+    contactHeader: 'Dra. Ana · Clínica América',
+    statusText: 'visto por último hoje às 16:05',
+    dateLabel: '18 DE NOVEMBRO',
+    messages: [
+      {
+        from: 'client',
+        text: 'Oi equipe Hard-Lan, passando pra agradecer pela instalação do Firewall e do Wi-Fi aqui nos 3 andares',
+        time: '15:40',
+      },
+      {
+        from: 'client',
+        text: 'Os tablets da triagem pararam de cair e a rede dos pacientes ficou 100% separada do prontuário, certinho dentro da LGPD 👏',
+        time: '15:41',
+      },
+      {
+        from: 'hardlan',
+        text: 'Ficamos muito felizes, Dra. Ana! Toda topologia já está documentada para vocês.',
+        time: '15:44',
+      },
+      {
+        from: 'client',
+        text: 'Nota 10 pelo capricho no rack também! Ficou muito organizado.',
+        time: '15:46',
+      },
+    ],
+    contextMetric: 'Wi-Fi Corporativo e Firewall · Rio Preto',
   },
   {
     id: 'dep-3',
     name: 'Marcos Vinícius Prado',
     role: 'Coordenador de Projetos BIM',
     company: 'Construtora Paulista',
-    initials: 'MP',
-    quote:
-      'Precisávamos de workstations confiáveis que aguentassem renderização pesada sem superaquecer, além de suporte rápido quando surge qualquer demanda em obra. A Hard-Lan entrega precisão técnica rara na região.',
-    contextMetric: 'Workstations e Suporte Presencial · Desde 2019',
+    avatar: '/src/assets/images/client_marcos_avatar_1795605526866.jpg',
+    contactHeader: 'Marcos Prado · Engenharia',
+    statusText: 'online',
+    dateLabel: 'ONTEM',
+    messages: [
+      {
+        from: 'hardlan',
+        text: 'E aí Marcos, as 4 workstations novas de BIM já estão rodando bem nos projetos?',
+        time: '09:30',
+      },
+      {
+        from: 'client',
+        text: 'Opa bom dia! Rapaz, voando baixo 🚀',
+        time: '09:34',
+      },
+      {
+        from: 'client',
+        text: 'Um render que levava quase 40 min aqui no escritório ontem fechou em 12 min e a máquina nem esquentou. Montagem impecável mesmo',
+        time: '09:35',
+      },
+      {
+        from: 'client',
+        text: 'Semana que vem já vamos cotar mais duas pro pessoal da obra',
+        time: '09:36',
+      },
+    ],
+    contextMetric: 'Workstations BIM e Suporte · Desde 2019',
   },
 ];
 
