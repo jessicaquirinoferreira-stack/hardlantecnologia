@@ -22,7 +22,7 @@ const INITIAL_MESSAGES: ChatMessage[] = [
   {
     id: 'welcome-1',
     sender: 'assistant',
-    text: 'Olá! Eu sou a Helena Costa, da Hard-Lan Tecnologia. Desde 2002 ajudamos empresas em São José do Rio Preto e região a manterem sua T.I. sempre segura e online. Como posso te ajudar hoje?',
+    text: 'Olá! Eu sou a Samantha, da Hard-Lan Tecnologia. Desde 2002 ajudamos empresas em São José do Rio Preto e região a manterem sua T.I. sempre segura e online. Como posso te ajudar hoje?',
     showSocialActions: true,
   },
 ];
@@ -126,7 +126,7 @@ export function VirtualAssistant() {
       <AnimatePresence>
         {isOpen && (
           <motion.section
-            aria-label="Assistente virtual Helena Costa — Hard-Lan Tecnologia"
+            aria-label="Assistente virtual Samantha — Hard-Lan Tecnologia"
             initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 14, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 14, scale: 0.96 }}
@@ -139,13 +139,13 @@ export function VirtualAssistant() {
                 <div className="h-11 w-11 shrink-0 overflow-hidden rounded-full border border-[#007BFF]/40 dark:border-[#00D4FF]/40 bg-slate-900">
                   <ResilientImage
                     src="/src/assets/images/assistant_helena_avatar_1795558738885.jpg"
-                    alt="Helena Costa — Assistente Virtual da Hard-Lan Tecnologia"
+                    alt="Samantha — Assistente Virtual da Hard-Lan Tecnologia"
                     className="h-full w-full object-cover object-top"
                   />
                 </div>
                 <div className="min-w-0">
                   <h3 className="font-display text-sm font-bold text-slate-950 dark:text-white truncate">
-                    Helena Costa
+                    Samantha
                   </h3>
                   <p className="text-xs text-slate-500 dark:text-slate-400 truncate">
                     Atendimento Digital · Hard-Lan
@@ -237,7 +237,7 @@ export function VirtualAssistant() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Digite sua dúvida simples..."
-                aria-label="Digite sua dúvida para a assistente Helena Costa"
+                aria-label="Digite sua dúvida para a assistente Samantha"
                 className="min-h-[38px] flex-1 rounded-lg border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-[#141724] px-3 py-1.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-[#007BFF] dark:focus:border-[#00D4FF] focus:outline-none"
               />
               <button
@@ -259,21 +259,21 @@ export function VirtualAssistant() {
         aria-expanded={isOpen}
         aria-label={
           isOpen
-            ? 'Fechar atendimento virtual com Helena Costa'
-            : 'Falar com Helena Costa, assistente virtual da Hard-Lan'
+            ? 'Fechar atendimento virtual com Samantha'
+            : 'Falar com Samantha, assistente virtual da Hard-Lan'
         }
         className="group flex items-center gap-2.5 rounded-full border border-slate-200 dark:border-white/15 bg-white/95 dark:bg-[#111420]/95 p-1.5 pr-4 shadow-[0_10px_30px_rgba(0,0,0,0.28)] backdrop-blur-md hover:border-[#007BFF]/55 dark:hover:border-[#00D4FF]/55 active:scale-[0.98] transition-all duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00D4FF]"
       >
         <span className="h-10 w-10 shrink-0 overflow-hidden rounded-full border border-[#007BFF]/40 dark:border-[#00D4FF]/40 bg-slate-900">
           <ResilientImage
             src="/src/assets/images/assistant_helena_avatar_1795558738885.jpg"
-            alt="Foto de Helena Costa"
+            alt="Foto de Samantha"
             className="h-full w-full object-cover object-top"
           />
         </span>
         <span className="text-left leading-tight">
           <span className="block font-display text-xs font-bold text-slate-900 dark:text-white">
-            Helena Costa
+            Samantha
           </span>
           <span className="block text-[11px] font-medium text-[#007BFF] dark:text-[#00D4FF]">
             {isOpen ? 'Fechar chat' : 'Tirar dúvidas'}
