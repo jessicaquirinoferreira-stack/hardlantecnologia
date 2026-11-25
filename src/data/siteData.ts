@@ -1,6 +1,6 @@
 export const COMPANY = {
-  name: 'Hard-Lan Tecnologia',
-  shortName: 'Hard-Lan',
+  name: 'Hard-Lan Tecnologias',
+  shortName: 'Hard-Lan Tecnologias',
   since: 2002,
   yearsExperience: 23,
   slogan:

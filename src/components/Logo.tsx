@@ -56,15 +56,10 @@ export function Logo({ className = '', showSubtext = false }: LogoProps) {
           />
         </svg>
       )}
-      <span className="inline-flex flex-col leading-none">
-        <span className="font-display text-lg font-bold tracking-tight text-slate-900 dark:text-white">
-          Hard-Lan
+      <span className="inline-flex items-center leading-none">
+        <span className="font-display text-base sm:text-lg font-bold tracking-tight text-slate-900 dark:text-white whitespace-nowrap">
+          Hard-Lan Tecnologias
         </span>
-        {showSubtext && (
-          <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400 mt-0.5">
-            Tecnologia
-          </span>
-        )}
       </span>
     </span>
   );
