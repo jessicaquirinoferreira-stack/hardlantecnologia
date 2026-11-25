@@ -285,20 +285,83 @@ export const PROJECTS: ProjectCase[] = [
 ];
 
 export interface ClientLogo {
+  id: string;
   name: string;
   sector: string;
-  featured?: boolean;
+  logo: string;
+  isSquare?: boolean;
 }
 
 export const CLIENTS: ClientLogo[] = [
-  { name: 'Itaú', sector: 'Instituição Financeira', featured: true },
-  { name: 'Grupo América Saúde', sector: 'Clínicas & Diagnósticos' },
-  { name: 'AgroRio Logística', sector: 'Agronegócio & Transporte' },
-  { name: 'Construtora Paulista', sector: 'Engenharia Civil' },
-  { name: 'Rede MedRio', sector: 'Saúde Corporativa' },
-  { name: 'Noroeste Indústria', sector: 'Manufatura & ERP' },
-  { name: 'Grupo Rio Preto Embalagens', sector: 'Indústria' },
-  { name: 'Contábil Vanguarda', sector: 'Serviços Corporativos' },
+  {
+    id: 'itau',
+    name: 'Itaú',
+    sector: 'Setor Bancário',
+    logo: '/src/assets/logos/itau.svg',
+    isSquare: true,
+  },
+  {
+    id: 'santander',
+    name: 'Banco Santander',
+    sector: 'Setor Bancário',
+    logo: '/src/assets/logos/santander.svg',
+  },
+  {
+    id: 'caixa',
+    name: 'Caixa Econômica Federal',
+    sector: 'Instituição Financeira',
+    logo: '/src/assets/logos/caixa.svg',
+  },
+  {
+    id: 'bradesco',
+    name: 'Bradesco',
+    sector: 'Setor Bancário',
+    logo: '/src/assets/logos/bradesco.svg',
+  },
+  {
+    id: 'vivo',
+    name: 'Vivo',
+    sector: 'Telecomunicações',
+    logo: '/src/assets/logos/vivo.svg',
+  },
+  {
+    id: 'claro',
+    name: 'Claro',
+    sector: 'Telecomunicações',
+    logo: '/src/assets/logos/claro.svg',
+    isSquare: true,
+  },
+  {
+    id: 'unisys',
+    name: 'Unisys',
+    sector: 'Tecnologia Corporativa',
+    logo: '/src/assets/logos/unisys.svg',
+  },
+  {
+    id: 'muffato',
+    name: 'Grupo Muffato',
+    sector: 'Varejo & Supermercados',
+    logo: '/src/assets/logos/muffato.svg',
+  },
+  {
+    id: 'carrefour',
+    name: 'Carrefour',
+    sector: 'Varejo & Hipermercados',
+    logo: '/src/assets/logos/carrefour.svg',
+  },
+  {
+    id: 'monte-carlo',
+    name: 'Rede Monte Carlo',
+    sector: 'Postos & Conveniência',
+    logo: '/src/assets/logos/montecarlo.png',
+    isSquare: true,
+  },
+  {
+    id: 'hapvida',
+    name: 'Hapvida',
+    sector: 'Saúde Corporativa',
+    logo: '/src/assets/logos/hapvida.svg',
+  },
 ];
 
 export interface WhatsAppChatBubble {

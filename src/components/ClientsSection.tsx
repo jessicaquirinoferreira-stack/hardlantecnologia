@@ -3,22 +3,6 @@ import { motion, useReducedMotion } from 'motion/react';
 import { CLIENTS, TESTIMONIALS, type Testimonial } from '../data/siteData';
 import { ResilientImage } from './ResilientImage';
 
-function ItauWordmark() {
-  return (
-    <span className="inline-flex items-center gap-2.5">
-      <span
-        aria-hidden="true"
-        className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#EC7000] text-[#FFFF00] font-display text-xs font-extrabold tracking-tight shadow-sm"
-      >
-        Itaú
-      </span>
-      <span className="font-display text-base font-bold tracking-tight text-slate-900 dark:text-white">
-        Itaú
-      </span>
-    </span>
-  );
-}
-
 function DoubleCheckReadIcon() {
   return (
     <svg
@@ -206,7 +190,7 @@ export function ClientsSection() {
         </div>
 
         {/* Infinite Marquee Logo Wall */}
-        <div className="marquee-wrapper relative mt-12 overflow-hidden rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#10121B] py-6">
+        <div className="marquee-wrapper relative mt-12 overflow-hidden rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#10121B] py-7">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 sm:w-24 bg-gradient-to-r from-white dark:from-[#10121B] to-transparent"
@@ -216,23 +200,28 @@ export function ClientsSection() {
             className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 sm:w-24 bg-gradient-to-l from-white dark:from-[#10121B] to-transparent"
           />
 
-          <div className="animate-marquee items-center gap-6 px-3">
+          <div className="animate-marquee items-center gap-5 px-3">
             {marqueeItems.map((client, idx) => (
               <div
-                key={`${client.name}-${idx}`}
-                className="flex min-w-[220px] items-center justify-between gap-4 rounded-xl border border-slate-200/80 dark:border-white/[0.08] bg-slate-50/70 dark:bg-white/[0.02] px-5 py-3.5"
+                key={`${client.id}-${idx}`}
+                className="flex h-[106px] w-[216px] shrink-0 flex-col items-center justify-between rounded-xl border border-slate-200/90 dark:border-white/15 bg-white px-5 py-3.5 shadow-sm transition-transform duration-200 hover:-translate-y-0.5"
               >
-                <div>
-                  {client.name === 'Itaú' ? (
-                    <ItauWordmark />
-                  ) : (
-                    <span className="font-display text-sm sm:text-base font-bold tracking-tight text-slate-800 dark:text-slate-100 whitespace-nowrap">
-                      {client.name}
-                    </span>
-                  )}
-                  <p className="mt-1 text-xs text-slate-500 dark:text-slate-400 whitespace-nowrap">
-                    {client.sector}
-                  </p>
+                <div className="flex flex-1 w-full items-center justify-center overflow-hidden">
+                  <img
+                    src={client.logo}
+                    alt={`Logo oficial ${client.name}`}
+                    title={client.name}
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                    className={
+                      client.isSquare
+                        ? 'h-11 w-11 rounded-lg object-contain select-none'
+                        : 'max-h-9 max-w-[162px] w-auto object-contain select-none'
+                    }
+                  />
+                </div>
+                <div className="mt-2 w-full truncate text-center text-[11px] font-medium text-slate-500">
+                  {client.name} · {client.sector}
                 </div>
               </div>
             ))}
